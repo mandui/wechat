@@ -20,7 +20,6 @@
 这里微信服务器需要确认，提供的这个服务器能确认消息是否是从微信服务器发出的，这需要在自己的服务器端写一个简单校验的功能。
 
 微信例子里提供了一个php版本的例子，这里附上一个[python版本](main.py)的，在服务器端用如下命令即可满足校验功能。
-
 ```
 python main.py 80
 ```
@@ -35,7 +34,6 @@ python main.py 80
 Heroku是一个部署网络应用的平台，相当于一个云后端，里面集成了运行环境需要的所有组件包括各类库、数据库、协议支持等等，主要面向不想自己部署服务器的企业，可以租用不同响应规模的产品。
 
 简单来说，用以下配置，即可成功。
-
 ```
 URL：https://young-anchorage-86960.herokuapp.com/expr-wechat
 Token：mandui
@@ -47,20 +45,19 @@ Token：mandui
 
 2. 准备工作：Heroku的代码使用git提交的，也就是说，可以在本地写好，用git传到服务器，然后Heroku帮你运行。所以有以下工具需要安装：
 
-[Git](https://desktop.github.com/)：Github Desktop集成git命令行和GUI。
-[Heroku Cli](https://devcenter.heroku.com/articles/heroku-cli)：Heroku命令行，用于本地远端代码部署。在链接中有详细说明。需要Git支持。
+    [Git](https://desktop.github.com/)：Github Desktop集成git命令行和GUI。
+
+    [Heroku Cli](https://devcenter.heroku.com/articles/heroku-cli)：Heroku命令行，用于本地远端代码部署。在链接中有详细说明。需要Git支持。
 
 3. [Startup](https://devcenter.heroku.com/start)：Heroku支持多种语言部署，选一个自己熟悉的。Heroku需要识别特定的结构配置来自动化部署网络服务，所以建议第一回跟着startup教程，部署一个默认project，之后再做修改。每一种语言里面描述都很详细，照着做就好。
 
 4. [代码修改](https://devcenter.heroku.com/articles/getting-started-with-java#push-local-changes)：Startup之后，本地应该有一份代码，修改逻辑之后，用以下命令将更改更新到远端，并开启服务：
-
 ```
 $ git add *
 $ git commit -m "some description"
 $ git push heroku master
 $ heroku open
 ```
-
 5. [Log](https://devcenter.heroku.com/articles/getting-started-with-java#view-logs)：可以在命令行这样查看打印日志。
 
 ### 接入设置 之 映射本地调试
