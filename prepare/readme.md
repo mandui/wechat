@@ -24,7 +24,7 @@
 python main.py 80
 ```
 
-### 接入配置
+### 接入配置 之 部署
 
 由于作者之前从未有过服务器端的开发经验，所以开始时就想避免使用真实（工作）环境，这里就会有一个问题，需要找一个真实域名的服务器，提供这样一个后台服务。
 
@@ -40,9 +40,6 @@ Heroku是一个部署网络应用的平台，相当于一个云后端，里面�
 URL：https://young-anchorage-86960.herokuapp.com/expr-wechat
 Token：mandui
 ```
-
-之后，可以选择：一，用nginx等将这个地址映射到本地，然后本地开服务器，即可完成本地调试过程；二，注册一个Heroku账户，完成startup步骤，获得一个真实网络接口。本地调试会在后面一个section讲，这里简单写一下Heroku的配置。
-
 1. [注册账户](https://signup.heroku.com/login)：也可以使用i-mandui@outlook.com/mandui@2019登录。
 
 2. 准备工作：Heroku的代码使用git提交的，也就是说，可以在本地写好，用git传到服务器，然后Heroku帮你运行。所以有以下工具需要安装：
